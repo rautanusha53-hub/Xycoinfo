@@ -32,8 +32,12 @@ No `UPSTREAM_KEY` environment variable is required.
 - `GET /api/player?uid=1871114586&key=HNTH` — player lookup
   (the key is still required here and is forwarded to the upstream provider;
   it is just never displayed on the website's opening response)
+- `GET /api/mlbb?uid=1608878422&zone=16769&key=axc90` — Mobile Legends lookup
+  (`user_id` / `zone_id` also accepted; optional `region`, default `bd`)
 
 ## CORS
+CORS headers are added to every response (including errors and
+OPTIONS preflight), so no CORS proxy is ever needed.
 All responses include `Access-Control-Allow-Origin: *`, so browser
 `fetch()` calls from any website will work — no CORS proxy needed.
 To restrict access to specific websites later, change `origins: "*"`
