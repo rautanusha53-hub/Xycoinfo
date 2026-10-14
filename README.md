@@ -38,3 +38,4 @@ All responses include `Access-Control-Allow-Origin: *`, so browser
 `fetch()` calls from any website will work — no CORS proxy needed.
 To restrict access to specific websites later, change `origins: "*"`
 in `app.py` to a list of your domains.
+
